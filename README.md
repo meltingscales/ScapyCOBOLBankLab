@@ -8,7 +8,12 @@ Rust backend simulating a filepath manipulation and a command injection vulnerab
 ## outline
 
 rust based
+
 `justfile` for running targets
+i.e. 
+- start-server
+- start-client
+
 `SCAPY-README.md` gives you some pointers
 
 ### ./client/*
@@ -25,6 +30,10 @@ BANKDATA|XFER    |BECKY |JACKY  |0000500X        |X               |
 BANKCMD |CPY     |X     |X      |/tmp/foo.txt    |/tmp/foo2.txt   |
 BANKCMD |RUN     |X     |X      |/tmp/a.sh arg1  |                |
 ```
+
+client is set to auto-send a message every 30 seconds, chosen at random.
+all `BANKCMD|CPY` and `BANKCMD|RUN` commands take place in `/tmp/` with dummy files and harmless scripts stored at `./scripts` (copied during `start-client`) 
+guaranteeing this is a safe hacking environment.
 
 ### ./server/*
 
