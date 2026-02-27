@@ -1,0 +1,18 @@
+# Rust
+server/target/
+server/Cargo.lock
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+client/.pytest_cache/
+.pytest_cache/
+.uv/
+*.egg-info/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
