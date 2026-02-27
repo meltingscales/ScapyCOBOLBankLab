@@ -1,5 +1,9 @@
 # ScapyCOBOLBankLab - Just Commands
 
+# List available recipes (default)
+default:
+    @just --list
+
 # Start the vulnerable bank server
 start-server:
     cd server && cargo run
@@ -26,7 +30,3 @@ exploit:
 # Install dependencies with uv
 install:
     uv sync
-
-# List default recipe
-default:
-    @just --list
