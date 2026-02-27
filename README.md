@@ -42,3 +42,15 @@ server will process client commands and dumbly execute them
 ## goal
 
 your goal is to use scapy to inject a reverse shell or something similar.
+
+open multiple terminals,
+
+run `just start-server` in one,
+
+run `just start-client` in another,
+
+and crack open WireShark and notice how the victim communicates.
+
+then, run `just exploit` to try out a sample exploit. Read the `justfile` to see how it works. open the related `.py` file.
+
+then, craft your own exploit.
